@@ -30,7 +30,6 @@ run apk upgrade && \
 volume /etc/dns-over-https
 
 copy --from=Builder /usr/bin/doh-server /usr/bin/doh-server
-copy --from=Builder /tmp/dns-over-https-${DOH_VERSION}/doh-server/doh-server.conf /etc/dns-over-https/doh-server.conf
 
 expose 80
 
