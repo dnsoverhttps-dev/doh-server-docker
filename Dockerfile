@@ -8,7 +8,7 @@ from golang:latest as Builder
 
 env DOH_VERSION=2.0.0
 
-add https://github.com/m13253/dns-over-https/archive/v${DOH_VERSION}.tar.gz
+add https://github.com/m13253/dns-over-https/archive/v${DOH_VERSION}.tar.gz /tmp
 
 run tar -xf /tmp/v${DOH_VERSION}.tar.gz -C /tmp && \
     make && \
