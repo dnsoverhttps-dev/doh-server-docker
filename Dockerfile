@@ -11,6 +11,7 @@ env DOH_VERSION=2.0.0
 add https://github.com/m13253/dns-over-https/archive/v${DOH_VERSION}.tar.gz /tmp
 
 run tar -xf /tmp/v${DOH_VERSION}.tar.gz -C /tmp && \
+    cd /tmp/dns-over-https-${DOH_VERSION} && \
     make && \
     cp /tmp/dns-over-https-${DOH_VERSION}/doh-server/doh-server \
         /usr/bin/doh-server
