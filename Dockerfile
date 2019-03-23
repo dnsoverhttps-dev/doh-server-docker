@@ -27,17 +27,18 @@ run apk upgrade && \
     adduser -D -G doh -u 1500 doh && \
     mkdir -p /etc/dns-over-https
 
+volume /etc/dns-over-https
+
 copy --from=Builder /usr/bin/doh-server /usr/bin/doh-server
+copy --from=builder /tmp/dns-over-https-${DOH_VERSION}/doh-server/doh-server.conf /etc/dns-over-https/doh-server.conf
 
-VOLUME /etc/dns-over-https
+expose 80
 
-EXPOSE 80
+workdir /
 
-WORKDIR /
+user doh
 
-USER doh
+label description="doh-server-docker with dockerizing m13253's software"
+label maintainer="smallsunshine <dnsoverhttps.dev>"
 
-LABEL description="doh-server-docker with dockerizing m13253's software"
-LABEL maintainer="smallsunshine <dnsoverhttps.dev>"
-
-CMD ["doh-server", "-conf", "/etc/doh-server.conf", "-verbose"]
+cmd ["doh-server", "-conf", "/etc/doh-server.conf", "-verbose"]
