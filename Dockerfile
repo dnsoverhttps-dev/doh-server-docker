@@ -6,7 +6,7 @@
 
 from golang:latest as Builder
 
-env DOH_VERSION=2.0.0
+env DOH_VERSION=2.0.1
 
 add https://github.com/m13253/dns-over-https/archive/v${DOH_VERSION}.tar.gz /tmp
 
@@ -24,10 +24,9 @@ run apk upgrade && \
     apk add --update libc6-compat libstdc++ && \
     apk add --no-cache ca-certificates && \
     addgroup -g 1500 doh && \
-    adduser -D -G doh -u 1500 doh && \
-    mkdir -p /etc/dns-over-https
+    adduser -D -G doh -u 1500 doh
 
-volume /etc/dns-over-https
+volume /etc/doh-server
 
 copy --from=Builder /usr/bin/doh-server /usr/bin/doh-server
 
