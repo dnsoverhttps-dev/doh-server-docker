@@ -37,6 +37,6 @@ workdir /
 user doh
 
 label description="doh-server-docker with dockerizing m13253's software"
-label maintainer="smallsunshine <dnsoverhttps.dev>"
+label maintainer="dnsoverhttps org <dnsoverhttps.dev>"
 
 cmd ["doh-server", "-conf", "/etc/doh-server/doh-server.conf", "-verbose"]

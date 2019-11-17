@@ -2,7 +2,7 @@
                     GNU AFFERO GENERAL PUBLIC LICENSE
                        Version 3, 19 November 2007
 
- Copyright (C) 2007 Free Software Foundation, Inc. <http://fsf.org/>
+ Copyright (C) 2019 dnsoverhttps org. <https://dnsoverhttps.dev/>
  Everyone is permitted to copy and distribute verbatim copies
  of this license document, but changing it is not allowed.
 
@@ -631,7 +631,7 @@ state the exclusion of warranty; and each file should have at least
 the "copyright" line and a pointer to where the full notice is found.
 
     doh-server-docker with dockerizing m13253's software
-    Copyright (C) 2019 small-sunshines
+    Copyright (C) 2019 dnsoverhttps org
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU Affero General Public License as published
